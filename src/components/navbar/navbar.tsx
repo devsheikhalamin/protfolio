@@ -18,8 +18,8 @@ function NavbarPage() {
                 {/* Logo Section */}
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img
-                        className="w-10 h-10 rounded-full object-cover" // logo size একটু ছোট করা
-                        src="/public/images/Ac.jpg"
+                        className="w-10 h-10 rounded-full object-cover"
+                        src="/images/Ac.jpg"
                         alt="Logo"
                     />
                     <span className="self-center text-xl font-bold whitespace-nowrap dark:text-white">

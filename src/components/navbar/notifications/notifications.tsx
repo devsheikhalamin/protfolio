@@ -1,11 +1,11 @@
 function Notifications() {
     const clients = [
-        { id: 1, img: "public/images/linkedin.png", name: "LinkedIn", bg: "bg-red-200" },
-        { id: 2, img: "public/images/spotify.png", name: "Spotify", bg: "bg-green-200" },
-        { id: 3, img: "public/images/amazon.png", name: "Amazon", bg: "bg-yellow-200" },
-        { id: 4, img: "public/images/medium.png", name: "Medium", bg: "bg-blue-200" },
-        { id: 5, img: "public/images/spotify.png", name: "Spotify", bg: "bg-pink-200" },
-        { id: 6, img: "public/images/google.png", name: "Google", bg: "bg-purple-200" },
+        { id: 1, img: "/images/linkedin.png", name: "LinkedIn", bg: "bg-red-200" },
+        { id: 2, img: "/images/spotify.png", name: "Spotify", bg: "bg-green-200" },
+        { id: 3, img: "/images/amazon.png", name: "Amazon", bg: "bg-yellow-200" },
+        { id: 4, img: "/images/medium.png", name: "Medium", bg: "bg-blue-200" },
+        { id: 5, img: "/images/spotify.png", name: "Spotify", bg: "bg-pink-200" },
+        { id: 6, img: "/images/google.png", name: "Google", bg: "bg-purple-200" },
     ];
 
     return (

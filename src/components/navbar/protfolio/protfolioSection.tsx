@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 function PortfolioSection() {
     const boxes = [
-        { id: 1, title: "Product Admin Dashboard", category: "UI-UX DESIGN", img: "public/images/project-4.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-purple-100 to-purple-200" },
-        { id: 2, title: "E-Commerce Website", category: "WEB DESIGN", img: "public/images/project-5.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-pink-100 to-pink-200" },
-        { id: 3, title: "Mobile App UI", category: "APP DESIGN", img: "public/images/project-2.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-cyan-100 to-cyan-200" },
-        { id: 4, title: "Dashboard Analytics", category: "UI/UX", img: "public/images/project-6.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-green-100 to-green-200" },
+        { id: 1, title: "Product Admin Dashboard", category: "UI-UX DESIGN", img: "/images/project-4.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-purple-100 to-purple-200" },
+        { id: 2, title: "E-Commerce Website", category: "WEB DESIGN", img: "/images/project-5.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-pink-100 to-pink-200" },
+        { id: 3, title: "Mobile App UI", category: "APP DESIGN", img: "/images/project-2.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-cyan-100 to-cyan-200" },
+        { id: 4, title: "Dashboard Analytics", category: "UI/UX", img: "/images/project-6.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-green-100 to-green-200" },
     ];
 
     // Animation variants

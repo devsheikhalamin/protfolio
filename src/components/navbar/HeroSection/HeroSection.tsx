@@ -65,7 +65,7 @@ function HeroSection() {
             <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
 
                 {/* Left Content */}
-                <div className="text-center md:text-left">
+                <div className="text-center md:text-left order-2 lg:order-1">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         <TypingText text="Hello, I’m Alamin Sheikh" speed={150} />
                     </h2>
@@ -99,11 +99,11 @@ function HeroSection() {
                 </div>
 
                 {/* Right Image */}
-                <div className="flex justify-center md:justify-end">
-                    <div className={`w-full max-w-sm md:max-w-md lg:max-w-lg bg-indigo-100 rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                <div className="flex justify-center md:justify-end order-1 lg:order-2">
+                    <div className={`w-full order-2 max-w-sm md:max-w-md lg:max-w-lg bg-indigo-100 rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         } animate-float`}>
                         <img
-                            src="/images/alamin-1.jpg"
+                            src="/images/sheikh.jpg"
                             alt="Profile"
                             className="w-full h-auto rounded-lg object-cover"
                         />

@@ -108,7 +108,7 @@ function HeroSection() {
                 {/* Right Image */}
                 <div className="flex justify-center md:justify-end order-1 lg:order-2 mt-10 ">
                     <div
-                        className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-indigo-100  rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage
+                        className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-indigo-100 mt-14  rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-10"
                             } animate-float`}

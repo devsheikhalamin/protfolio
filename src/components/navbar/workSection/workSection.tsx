@@ -28,7 +28,7 @@ function WorkSection() {
     ];
 
     return (
-        <section id="process" className="bg-gradient-to-r from-purple-50 via-pink-50 to-rose-50 py-16">
+        <section id="Work" className="bg-rose-50 dark:bg-background py-16 px-5">
             <style>
                 {`
           @keyframes wiggle {
@@ -41,11 +41,11 @@ function WorkSection() {
         `}
             </style>
 
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900">
+            <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 text-center mt-5">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
                     Work Process
                 </h2>
-                <p className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
+                <p className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto dark:text-white">
                     We follow a structured process to deliver quality work that meets expectations.
                 </p>
 

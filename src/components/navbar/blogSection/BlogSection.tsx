@@ -41,26 +41,25 @@ function BlogSection() {
 
     return (
         <div
-            id="office"
-            className="bg-gradient-to-br from-gray-50 via-purple-100 to-gray-50 
-                       px-4 sm:px-6 md:px-10 lg:px-20 py-10"
+            id="Office"
+            className="bg-fuchsia-50  sm:px-6 md:px-10 lg:px-20 py-10 dark:bg-background"
         >
             <div className="text-center mt-10">
-                <h4 className="text-[26px] sm:text-[32px] font-extrabold text-gray-800 drop-shadow-sm">
+                <h4 className="text-[26px] sm:text-[32px] font-extrabold text-gray-800 drop-shadow-sm dark:text-white">
                     My Office
                 </h4>
-                <p className="text-[15px] sm:text-[17px] text-gray-600 mt-3 max-w-2xl mx-auto">
+                <p className="text-[15px] sm:text-[17px] text-gray-600 mt-3 max-w-2xl mx-auto dark:text-white">
                     There are many variations of passages of Lorem Ipsum available,
                     but the majority
                 </p>
             </div>
 
             {/* Blog Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 px-4">
                 {blogs.map((blog, index) => (
                     <div
                         key={blog.id}
-                        className={`bg-white/80 backdrop-blur-md rounded-xl shadow-lg transition-all duration-500 transform ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                        className={`bg-white dark:bg-gray-400 backdrop-blur-md rounded-xl shadow-lg transition-all duration-500 transform ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                             }`}
                         style={{ transitionDelay: `${index * 200}ms` }}
                     >
@@ -70,10 +69,10 @@ function BlogSection() {
                             alt="blog"
                         />
                         <div className="p-5 text-center">
-                            <p className="text-[12px] text-gray-400">
+                            <p className="text-[12px] text-gray-400 dark:text-white">
                                 {blog.date} / {blog.comments}
                             </p>
-                            <p className="text-[15px] text-gray-700 font-medium mt-2">
+                            <p className="text-[15px] text-gray-700 font-medium mt-2 dark:text-white">
                                 {blog.desc}
                             </p>
                         </div>

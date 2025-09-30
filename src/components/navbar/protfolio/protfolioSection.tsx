@@ -24,17 +24,17 @@ function PortfolioSection() {
     };
 
     return (
-        <div id="project" className="bg-gray-100 px-3 sm:px-4 md:px-6 py-3">
-            <div className="text-center mt-10">
+        <div id="Project" className="bg-gray-100 dark:bg-background py-10">
+            <div className="text-center">
                 <h3 className="text-[31px] sm:text-[35px] font-extrabold">My Project</h3>
-                <p className="text-[20px] text-gray-700 p-1 sm:px-6 md:px-16 md:py-6">
+                <p className="text-[20px] text-gray-700 p-1 sm:px-6 md:px-16 md:py-6 dark:text-white">
                     Check out some of our latest projects below.
                 </p>
             </div>
 
             {/* Grid */}
             <motion.div
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-3 justify-items-center"
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-5 justify-items-center px-8"
                 variants={container}
                 initial="hidden"
                 whileInView="show"

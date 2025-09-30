@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react";
 
 // Typing Text Component
@@ -61,17 +59,20 @@ function HeroSection() {
     }, []);
 
     return (
-        <section className="bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 py-14 mt-6">
-            <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
+        <section
+            id="/"
+            className="w-full min-h-screen flex items-center bg-blue-50 dark:bg-background"
+        >
+            <div className="max-w-screen-xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 sm:px-6 lg:px-8">
 
                 {/* Left Content */}
                 <div className="text-center md:text-left order-2 lg:order-1">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
                         <TypingText text="Hello, I’m Alamin Sheikh" speed={150} />
                     </h2>
 
-                    <p className="mt-4 text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed">
-                        I'm a Freelance <span className="font-semibold text-gray-800">UI/UX Designer</span> and <span className="font-semibold text-gray-800">Developer</span> based in London, England.
+                    <p className="mt-4 text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed dark:text-white">
+                        I'm a Freelance <span className="font-semibold text-gray-800 dark:text-orange-100">UI/UX Designer</span> and <span className="font-semibold text-gray-800 dark:text-amber-50">Developer</span> based in London, England.
                     </p>
 
                     {/* Button */}
@@ -84,24 +85,34 @@ function HeroSection() {
                     {/* Stats with CountUp */}
                     <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
                         <div className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
-                            <h4 className="text-2xl font-bold text-gray-900"><CountUp end={15} /> Y.</h4>
+                            <h4 className="text-2xl font-bold text-gray-900">
+                                <CountUp end={15} /> Y.
+                            </h4>
                             <p className="text-sm text-gray-600 mt-1">Experience</p>
                         </div>
                         <div className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
-                            <h4 className="text-2xl font-bold text-gray-900"><CountUp end={250} />+</h4>
+                            <h4 className="text-2xl font-bold text-gray-900">
+                                <CountUp end={250} />+
+                            </h4>
                             <p className="text-sm text-gray-600 mt-1">Projects</p>
                         </div>
                         <div className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
-                            <h4 className="text-2xl font-bold text-gray-900"><CountUp end={58} /></h4>
+                            <h4 className="text-2xl font-bold text-gray-900">
+                                <CountUp end={58} />
+                            </h4>
                             <p className="text-sm text-gray-600 mt-1">Clients</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Right Image */}
-                <div className="flex justify-center md:justify-end order-1 lg:order-2">
-                    <div className={`w-full order-2 max-w-sm md:max-w-md lg:max-w-lg bg-indigo-100 rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                        } animate-float`}>
+                <div className="flex justify-center md:justify-end order-1 lg:order-2 mt-1">
+                    <div
+                        className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-indigo-100 rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-10"
+                            } animate-float`}
+                    >
                         <img
                             src="/images/sheikh.jpg"
                             alt="Profile"
@@ -115,4 +126,3 @@ function HeroSection() {
 }
 
 export default HeroSection;
-

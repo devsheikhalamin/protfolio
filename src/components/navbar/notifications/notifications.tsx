@@ -9,26 +9,20 @@ function Notifications() {
     ];
 
     return (
-        <div className="bg-cyan-50 pb-12 pt-6 overflow-hidden">
-            <div className="md:py-4 md:px-6 text-center">
+        <div id="Happy" className="bg-cyan-50 pb-12 pt-6 overflow-hidden dark:bg-background">
+            <div className="md:py-4 md:px-6 text-center mt-5">
                 {/* Heading */}
-                <h5 className="text-[26px] sm:text-[33px] font-extrabold text-gray-800">
+                <h5 className="text-[26px] sm:text-[33px] font-extrabold text-gray-800 dark:text-white">
                     Happy Clients
                 </h5>
-                <p className="text-[14px] sm:text-[16px] text-gray-600 mt-3 px-4 sm:px-0 max-w-2xl mx-auto">
+                <p className="text-[14px] sm:text-[16px] text-gray-600 mt-3 px-4 sm:px-0 max-w-2xl mx-auto dark:text-white">
                     There are many variations of passages of Lorem Ipsum available,
                     but the majority have suffered alteration.
                 </p>
 
                 {/* Sliding Clients Row */}
                 <div className="relative w-full mt-10 overflow-hidden">
-                    <div
-                        className="flex gap-6"
-                        style={{
-                            animation: "slideRight 25s linear infinite",
-                            width: "max-content",
-                        }}
-                    >
+                    <div className="flex gap-6 animate-slide" style={{ width: "max-content" }}>
                         {/* Original Clients */}
                         {clients.map((client) => (
                             <div
@@ -45,7 +39,7 @@ function Notifications() {
                             </div>
                         ))}
 
-                        {/* Duplicate Clients for Infinite Loop */}
+                        {/* Duplicate Clients for Seamless Loop */}
                         {clients.map((client) => (
                             <div
                                 key={`${client.id}-copy`}
@@ -66,11 +60,14 @@ function Notifications() {
 
             {/* Inline CSS Animation */}
             <style>{`
-                @keyframes slideRight {
-                    0% { transform: translateX(100%); }
-                    100% { transform: translateX(-100%); }
-                }
-            `}</style>
+        @keyframes slide {
+          0%   { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-slide {
+          animation: slide 20s linear infinite;
+        }
+      `}</style>
         </div>
     );
 }

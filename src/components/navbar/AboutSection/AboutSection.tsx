@@ -9,12 +9,12 @@ function AboutSection() {
     }, []);
 
     return (
-        <section id="about" className="bg-gradient-to-r from-pink-50 via-yellow-50 to-orange-50 py-20">
-            <div className="max-w-screen-xl mx-auto px-6">
+        <section id="About" className="bg-purple-50 dark:bg-background">
+            <div className="max-w-screen-xl mx-auto px-6 py-16">
 
                 {/* About Me Heading */}
-                <div className="text-center mb-12">
-                    <h1 className="text-[33px] sm:text-[35px] font-extrabold text-gray-900">
+                <div className="text-center mb-10">
+                    <h1 className="text-[33px] sm:text-[35px] font-extrabold text-gray-900 dark:text-white">
                         About Me
                     </h1>
                 </div>
@@ -38,20 +38,20 @@ function AboutSection() {
 
                     {/* Left Text */}
                     <div className="flex-1 text-center md:text-left">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-                            I am <span className="text-purple-500">Web Developer</span>
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
+                            I am <span className="text-purple-500 dark:text-amber-100">Web Developer</span>
                         </h2>
-                        <p className="mt-6 text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed">
+                        <p className="mt-6 text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed dark:text-white">
                             I am a professional User Experience Designer and Developer. I specialize in creating stylish, modern websites, web services, and online stores.
                             My passion is to design digital user experiences that are intuitive, immersive, and visually appealing.
                         </p>
 
                         {/* Buttons */}
                         <div className="mt-8 flex flex-col sm:flex-row sm:gap-4 justify-center md:justify-start">
-                            <a href="https://github.com/devsheikhalamin" className="px-6 py-3 bg-purple-500 text-white rounded-md shadow-sm hover:bg-purple-600 transition">
-                                My GitHub
+                            <a href="https://www.linkedin.com/in/md-alamin-sheikh/" className="px-6 py-3 bg-purple-500 text-white rounded-md shadow-sm hover:bg-purple-600 transition">
+                                My Linkedin
                             </a>
-                            <button className="mt-3 sm:mt-0 px-6 py-3 hover:text-white text-gray-800 rounded-md border border-gray-300 shadow-sm hover:bg-purple-500 transition">
+                            <button className="mt-3 sm:mt-0 px-6 py-3 hover:text-white text-gray-800 rounded-md border border-gray-300 shadow-sm hover:bg-purple-500 transition dark:text-white">
                                 Download CV
                             </button>
                         </div>

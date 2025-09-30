@@ -8,6 +8,7 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Logo } from "../ui/logo";
 
 const footerLinks = [
   {
@@ -38,15 +39,15 @@ const footerLinks = [
 
 const Footer04Page = () => {
   return (
-    <div className="flex flex-col bg-gray-200">
+    <div className="flex flex-col bg-purple-200 dark:bg-background">
       <div className="grow bg-muted" />
       <footer className="border-t">
         <div className="max-w-(--breakpoint-xl) mx-auto">
           <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10 px-6 xl:px-0">
             <div>
-              {/* Logo */}
 
-              <h1 className="text-[28px] font-extrabold"> Brooklyn</h1>
+
+              <h1 className="text-[28px] font-extrabold"> <Logo /></h1>
 
               <ul className="mt-6 flex items-center gap-4 flex-wrap">
                 {footerLinks.map(({ title, href }) => (

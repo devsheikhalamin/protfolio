@@ -9,5 +9,3 @@ export const config = {
     twitter: "https://twitter.com/shadcnui_blocks",
   },
 };
-
-

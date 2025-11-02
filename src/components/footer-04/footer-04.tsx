@@ -47,7 +47,7 @@ const Footer04Page = () => {
 
 
               <h1 className="text-[28px] font-extrabold">
-                <img className="h-15 rounded-full" src="/images/logo1.png" alt="logo" />
+                <img className="h-15 rounded-full" src="/images/logo01.jpg" alt="logo" />
               </h1>
 
               <ul className="mt-6 flex items-center gap-4 flex-wrap">
@@ -55,7 +55,7 @@ const Footer04Page = () => {
                   <li key={title}>
                     <Link
                       to={href}
-                      className="hover:text-foreground text-emerald-600 text-[14px]"
+                      className="hover:text-foreground text-purple-600 text-[14px]"
                     >
                       {title}
                     </Link>
@@ -66,17 +66,21 @@ const Footer04Page = () => {
 
             {/* Subscribe Newsletter */}
             <div className="max-w-xs w-full">
-              <h6 className="font-medium text-[16px] text-emerald-600">Stay up to date</h6>
+              <h6 className="font-medium text-[16px] text-purple-500">Stay up to date</h6>
               <form className="mt-6 flex items-center gap-2">
                 <Input type="email" placeholder="Enter your email" />
-                <Button className="bg-emerald-700 text-white hover:bg-gray-50 hover:text-black">Subscribe</Button>
+                <button className="px-4 py-2 rounded-md hover:text-white bg-gradient-to-r from-purple-500 via-purple-400
+ hover:from-purple-900 hover:via-fuchsia-800 to-fuchsia-400
+ transition-all duration-500 shadow-lg text-white">
+                  Subscribe
+                </button>
               </form>
             </div>
           </div>
           <Separator />
           <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
             {/* Copyright */}
-            <span className="text-emerald-700 text-sm">
+            <span className="text-purple-500 text-sm">
               &copy; {new Date().getFullYear()}{" "}
               <Link to="/" target="_blank">
                 Sheikhalamin

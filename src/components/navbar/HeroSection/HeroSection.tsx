@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-// TypingText Component (Multiple Texts)
+// TypingText Component
 function TypingText({ texts = ["Hello World"], speed = 150, pause = 1000 }) {
     const [displayedText, setDisplayedText] = useState("");
     const [textIndex, setTextIndex] = useState(0);
@@ -69,24 +69,24 @@ function HeroSection() {
 
     return (
         <section
-            id="/"
-            className="w-full min-h-screen flex items-center bg-emerald-50 dark:bg-background"
+            id="home"
+            className="w-full min-h-screen flex items-center dark:bg-background"
         >
             <div className="max-w-screen-xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 sm:px-6 lg:px-8">
 
                 {/* Left Content */}
                 <div className="text-center md:text-left order-2 lg:order-1">
                     <h1 className="text-2xl font-semibold mb-1.5">Hello, I'm</h1>
-                    <h5 className="text-5xl font-bold mb-1.5 text-emerald-800">Md Alamin Sheikh</h5>
-                    <p className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+                    <h5 className="text-5xl font-extrabold bg-gradient-to-r from-purple-500 via-fuchsia-700 to-orange-300 bg-clip-text text-transparent mt-4">
+                        Md Alamin Sheikh
+                    </h5>
+                    <p className="text-2xl font-semibold bg-gradient-to-r from-purple-500 via-fuchsia-700 to-orange-300 bg-clip-text text-transparent mt-4">
                         <TypingText
                             texts={[
                                 "Full Stack Web Developer",
-                                "Mern Stack Web Developer",
+                                "MERN Stack Web Developer",
                                 "Frontend Developer",
                                 "React JS Developer",
-
-
                             ]}
                             speed={150}
                             pause={1000}
@@ -97,28 +97,29 @@ function HeroSection() {
                         I'm a <span className="font-semibold text-gray-800 dark:text-amber-50">Frontend Developer</span>. I build responsive and scalable web applications using clean code and modern technologies.
                     </p>
 
-                    {/* Button */}
-                    <div className="mt-6">
-                        <button className="px-6 py-2 bg-emerald-800 text-white dark:text-black rounded-md shadow-md dark:bg-white hover:bg-emerald-800 transition">
+                    {/* Buttons */}
+                    <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                        <button className="px-6 py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 hover:from-purple-900 hover:via-fuchsia-800 transition-all duration-500 shadow-lg">
                             Say Hello!
                         </button>
+
                     </div>
 
-                    {/* Stats with CountUp */}
+
                     <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
-                        <div className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
+                        <div className="bg-white border border-fuchsia-500 rounded-lg p-6 text-center hover:shadow-lg transition">
                             <h4 className="text-2xl font-bold text-gray-900">
                                 <CountUp end={15} /> Y.
                             </h4>
                             <p className="text-sm text-gray-600 mt-1">Experience</p>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
+                        <div className="bg-white border border-fuchsia-500 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
                             <h4 className="text-2xl font-bold text-gray-900">
                                 <CountUp end={250} />+
                             </h4>
                             <p className="text-sm text-gray-600 mt-1">Projects</p>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
+                        <div className="bg-white border border-fuchsia-500 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
                             <h4 className="text-2xl font-bold text-gray-900">
                                 <CountUp end={58} />
                             </h4>
@@ -128,11 +129,9 @@ function HeroSection() {
                 </div>
 
                 {/* Right Image */}
-                <div className="flex justify-center mt-20 md:justify-end order-1 lg:order-2 lag:mt-10">
+                <div className="flex justify-center mt-15 md:justify-end order-1 lg:order-2">
                     <div
-                        className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-white rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage
-                            ? "opacity-100 translate-y-0"
-                            : "opacity-0 translate-y-10"
+                        className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-purple-100 rounded-xl p-1 shadow-md transition-all duration-700 transform ${showImage ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                             } animate-float`}
                     >
                         <img

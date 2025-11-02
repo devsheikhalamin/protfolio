@@ -28,7 +28,7 @@ function WorkSection() {
     ];
 
     return (
-        <section id="Work" className="bg-rose-50 dark:bg-background py-16 px-5">
+        <section id="Work" className="bg-emerald-50 dark:bg-background py-16 px-5">
             <style>
                 {`
           @keyframes wiggle {
@@ -42,20 +42,20 @@ function WorkSection() {
             </style>
 
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 text-center mt-5">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-emerald-800 dark:text-white">
                     Work Process
                 </h2>
-                <p className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto dark:text-white">
-                    We follow a structured process to deliver quality work that meets expectations.
+                <p className="mt-4 text-gray-600 text-sm md:text-base lg:text-2xl leading-relaxed dark:text-white">
+                    Technologies & Tools I Work With
                 </p>
 
                 <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {steps.map((step) => (
                         <div
                             key={step.id}
-                            className="wiggle bg-white shadow-md rounded-2xl p-6 border border-purple-200 transition duration-300 ease-in-out"
+                            className="wiggle bg-white shadow-md rounded-2xl p-6 border border-emerald-200 transition duration-300 ease-in-out"
                         >
-                            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-purple-600 text-white text-2xl rounded-lg">
+                            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-emerald-600 text-white text-2xl rounded-lg">
                                 {step.icon}
                             </div>
                             <h3 className="mt-4 text-lg font-bold text-gray-800">

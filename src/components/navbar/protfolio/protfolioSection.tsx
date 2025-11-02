@@ -2,10 +2,42 @@ import { motion } from "framer-motion";
 
 function PortfolioSection() {
     const boxes = [
-        { id: 1, title: "Product Admin Dashboard", category: "UI-UX DESIGN", img: "/images/project-4.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-purple-100 to-purple-200" },
-        { id: 2, title: "E-Commerce Website", category: "WEB DESIGN", img: "/images/project-5.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-pink-100 to-pink-200" },
-        { id: 3, title: "Mobile App UI", category: "APP DESIGN", img: "/images/project-2.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-cyan-100 to-cyan-200" },
-        { id: 4, title: "Dashboard Analytics", category: "UI/UX", img: "/images/project-6.jpg", desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.", bg: "bg-gradient-to-br from-green-100 to-green-200" },
+        {
+            id: 1,
+            title: "Personal Portfolio",
+            category: "UI-UX DESIGN",
+            img: "/images/protfolio.png",
+            desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.",
+            bg: "bg-emerald-100 border border-gray-100",
+            link: "https://protfolio-rho-steel.vercel.app/"
+        },
+        {
+            id: 2,
+            title: "Blog website",
+            category: "WEB DESIGN",
+            img: "/images/blog.png",
+            desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.",
+            bg: "bg-emerald-100 border border-gray-100",
+            link: "https://blog-project-rouge.vercel.app/"
+        },
+        {
+            id: 3,
+            title: "Library Management",
+            category: "APP DESIGN",
+            img: "/images/library.png",
+            desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.",
+            bg: "bg-emerald-100 border border-gray-100",
+            link: "https://library-wzl6.vercel.app/"
+        },
+        {
+            id: 4,
+            title: "Madrasa Website",
+            category: "UI/UX",
+            img: "/images/madrasa.png",
+            desc: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet.",
+            bg: "bg-emerald-100 border border-gray-100",
+            link: "https://simple-seven-phi.vercel.app/"
+        },
     ];
 
     // Animation variants
@@ -24,10 +56,10 @@ function PortfolioSection() {
     };
 
     return (
-        <div id="Project" className="bg-gray-100 dark:bg-background py-10">
+        <div id="Project" className="bg-emerald-50 dark:bg-background py-10">
             <div className="text-center">
-                <h3 className="text-[31px] sm:text-[35px] font-extrabold">My Project</h3>
-                <p className="text-[20px] text-gray-700 p-1 sm:px-6 md:px-16 md:py-6 dark:text-white">
+                <h3 className=" mb-6 text-2xl sm:text-3xl md:text-5xl font-extrabold text-emerald-800 dark:text-white">My Project</h3>
+                <p className="mb-6 text-gray-600 text-sm md:text-base lg:text-2xl leading-relaxed dark:text-white">
                     Check out some of our latest projects below.
                 </p>
             </div>
@@ -49,16 +81,18 @@ function PortfolioSection() {
                         transition={{ type: "spring", stiffness: 300 }}
                     >
                         <img
-                            className="w-full h-[220px] object-cover rounded-md mt-1.5"
+                            className="w-full h-[200px] object-cover rounded-md mt-1.5"
                             src={box.img}
                             alt={box.title}
                         />
 
-                        <p className="text-[13px] text-gray-500 text-center mt-2">{box.category}</p>
-                        <p className="text-[16px] font-bold text-center mt-1">{box.title}</p>
-                        <p className="text-[13px] text-gray-600 text-center mt-2 px-2">{box.desc}</p>
-                        <div className="border border-gray-600 rounded-md py-2 px-4 w-40 mx-auto mt-5 mb-4 cursor-pointer transition-colors duration-300 hover:bg-purple-500 hover:text-white">
-                            <button className="w-full text-center">Case Study</button>
+                        <p className="text-[16px] text-gray-500 text-center mt-2 ">{box.category}</p>
+                        <p className="text-[19px] font-bold text-center mt-1 dark:text-gray-600">{box.title}</p>
+                        <p className="text-[15px] text-gray-600 text-center mt-2 px-2">{box.desc}</p>
+                        <div className="border border-gray-600 rounded-md py-2 px-4 w-40 mx-auto mt-5 mb-4 cursor-pointer transition-colors duration-300 hover:bg-emerald-800 hover:text-white">
+                            <a href={box.link} target="_blank" rel="noopener noreferrer">
+                                <button className="w-full text-center text-gray-600 hover:text-white">Case Study</button>
+                            </a>
                         </div>
                     </motion.div>
                 ))}
@@ -66,7 +100,7 @@ function PortfolioSection() {
 
             {/* More Projects Button */}
             <div className="text-center mt-12 pb-6">
-                <button className="border-0 text-white px-14 py-3 bg-purple-500 rounded-md hover:bg-purple-600 hover:scale-105 transition-all duration-300 text-lg">
+                <button className="border-0 text-white px-14 py-3 bg-emerald-800 rounded-md hover:bg-emerald-800 hover:scale-105 transition-all duration-300 text-lg">
                     More Projects
                 </button>
             </div>

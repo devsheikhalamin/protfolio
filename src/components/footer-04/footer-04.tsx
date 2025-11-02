@@ -8,7 +8,6 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Logo } from "../ui/logo";
 
 const footerLinks = [
   {
@@ -39,7 +38,7 @@ const footerLinks = [
 
 const Footer04Page = () => {
   return (
-    <div className="flex flex-col bg-orange-100 dark:bg-background">
+    <div className="flex flex-col dark:bg-background">
       <div className="grow bg-muted" />
       <footer className="border-t">
         <div className="max-w-(--breakpoint-xl) mx-auto">
@@ -47,14 +46,16 @@ const Footer04Page = () => {
             <div>
 
 
-              <h1 className="text-[28px] font-extrabold"> <Logo /></h1>
+              <h1 className="text-[28px] font-extrabold">
+                <img className="h-15 rounded-full" src="/images/logo1.png" alt="logo" />
+              </h1>
 
               <ul className="mt-6 flex items-center gap-4 flex-wrap">
                 {footerLinks.map(({ title, href }) => (
                   <li key={title}>
                     <Link
                       to={href}
-                      className="text-muted-foreground hover:text-foreground"
+                      className="hover:text-foreground text-emerald-600 text-[18px]"
                     >
                       {title}
                     </Link>
@@ -65,20 +66,20 @@ const Footer04Page = () => {
 
             {/* Subscribe Newsletter */}
             <div className="max-w-xs w-full">
-              <h6 className="font-medium">Stay up to date</h6>
+              <h6 className="font-medium text-[17px] text-emerald-600">Stay up to date</h6>
               <form className="mt-6 flex items-center gap-2">
                 <Input type="email" placeholder="Enter your email" />
-                <Button className="bg-purple-500 text-white hover:bg-gray-50 hover:text-black">Subscribe</Button>
+                <Button className="bg-emerald-700 text-white hover:bg-gray-50 hover:text-black">Subscribe</Button>
               </form>
             </div>
           </div>
           <Separator />
           <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
             {/* Copyright */}
-            <span className="text-muted-foreground">
+            <span className="text-emerald-700">
               &copy; {new Date().getFullYear()}{" "}
               <Link to="/" target="_blank">
-                Shadcn UI Blocks
+                Sheikhalamin
               </Link>
               . All rights reserved.
             </span>

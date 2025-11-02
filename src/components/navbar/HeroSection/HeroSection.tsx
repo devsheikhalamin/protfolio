@@ -1,28 +1,37 @@
 import { useState, useEffect } from "react";
 
-// Typing Text Component
-function TypingText({ text = "", speed = 150 }) {
+// TypingText Component (Multiple Texts)
+function TypingText({ texts = ["Hello World"], speed = 150, pause = 1000 }) {
     const [displayedText, setDisplayedText] = useState("");
-    const [index, setIndex] = useState(0);
+    const [textIndex, setTextIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
+        const currentText = texts[textIndex];
+
+        const handleTyping = () => {
             if (!isDeleting) {
-                setDisplayedText(text.substring(0, index + 1));
-                setIndex(index + 1);
-                if (index + 1 === text.length) {
-                    setTimeout(() => setIsDeleting(true), 1500);
+                setDisplayedText(currentText.substring(0, charIndex + 1));
+                setCharIndex(charIndex + 1);
+
+                if (charIndex + 1 === currentText.length) {
+                    setTimeout(() => setIsDeleting(true), pause);
                 }
             } else {
-                setDisplayedText(text.substring(0, index - 1));
-                setIndex(index - 1);
-                if (index - 1 === 0) setIsDeleting(false);
-            }
-        }, speed);
+                setDisplayedText(currentText.substring(0, charIndex - 1));
+                setCharIndex(charIndex - 1);
 
-        return () => clearTimeout(timeout);
-    }, [index, isDeleting, text, speed]);
+                if (charIndex - 1 === 0) {
+                    setIsDeleting(false);
+                    setTextIndex((prev) => (prev + 1) % texts.length);
+                }
+            }
+        };
+
+        const timer = setTimeout(handleTyping, isDeleting ? speed / 2 : speed);
+        return () => clearTimeout(timer);
+    }, [charIndex, isDeleting, textIndex, texts, speed, pause]);
 
     return <span>{displayedText}|</span>;
 }
@@ -49,7 +58,7 @@ function CountUp({ end = 0, duration = 2000 }) {
     return <span>{count}</span>;
 }
 
-// Hero Section
+// HeroSection Component
 function HeroSection() {
     const [showImage, setShowImage] = useState(false);
 
@@ -61,23 +70,36 @@ function HeroSection() {
     return (
         <section
             id="/"
-            className="w-full min-h-screen flex items-center bg-blue-50 dark:bg-background"
+            className="w-full min-h-screen flex items-center bg-emerald-50 dark:bg-background"
         >
             <div className="max-w-screen-xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 sm:px-6 lg:px-8">
 
                 {/* Left Content */}
                 <div className="text-center md:text-left order-2 lg:order-1">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
-                        <TypingText text="Hello, I’m Alamin Sheikh" speed={150} />
-                    </h2>
+                    <h1 className="text-2xl font-semibold mb-1.5">Hello, I'm</h1>
+                    <h5 className="text-5xl font-bold mb-1.5 text-emerald-800">Md Alamin Sheikh</h5>
+                    <p className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+                        <TypingText
+                            texts={[
+                                "Full Stack Web Developer",
+                                "Mern Stack Web Developer",
+                                "Frontend Developer",
+                                "React JS Developer",
+
+
+                            ]}
+                            speed={150}
+                            pause={1000}
+                        />
+                    </p>
 
                     <p className="mt-4 text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed dark:text-white">
-                        I'm a Freelance <span className="font-semibold text-gray-800 dark:text-orange-100">UI/UX Designer</span> and <span className="font-semibold text-gray-800 dark:text-amber-50">Developer</span> based in London, England.
+                        I'm a <span className="font-semibold text-gray-800 dark:text-amber-50">Frontend Developer</span>. I build responsive and scalable web applications using clean code and modern technologies.
                     </p>
 
                     {/* Button */}
                     <div className="mt-6">
-                        <button className="px-6 py-2 bg-purple-600 text-white rounded-md shadow-md hover:bg-purple-700 transition">
+                        <button className="px-6 py-2 bg-emerald-800 text-white dark:text-black rounded-md shadow-md dark:bg-white hover:bg-emerald-800 transition">
                             Say Hello!
                         </button>
                     </div>
@@ -106,9 +128,9 @@ function HeroSection() {
                 </div>
 
                 {/* Right Image */}
-                <div className="flex justify-center md:justify-end order-1 lg:order-2 mt-10 ">
+                <div className="flex justify-center md:justify-end order-1 lg:order-2 mt-10">
                     <div
-                        className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-indigo-100 mt-14  rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage
+                        className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-white rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-10"
                             } animate-float`}
@@ -116,7 +138,7 @@ function HeroSection() {
                         <img
                             src="/images/sheikh.jpg"
                             alt="Profile"
-                            className="w-full h-auto rounded-lg object-cover"
+                            className="w-full h-auto rounded-md object-cover"
                         />
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import BlogSection from "../navbar/blogSection/BlogSection";
 import HeroSection from "../navbar/HeroSection/HeroSection";
 import Notifications from "../navbar/notifications/notifications";
 import PortfolioSection from "../navbar/protfolio/protfolioSection";
-import Together from "../navbar/together/together";
+
 import WorkSection from "../navbar/workSection/workSection";
 import NavbarPage from "../ui/navbar-01";
 
@@ -18,7 +18,6 @@ function HeaderPage() {
             <AboutSection />
             <WorkSection />
             <PortfolioSection />
-            <Together />
             <BlogSection />
             <Notifications />
             <Footer04Page />

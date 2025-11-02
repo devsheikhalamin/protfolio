@@ -128,7 +128,7 @@ function HeroSection() {
                 </div>
 
                 {/* Right Image */}
-                <div className="flex justify-center md:justify-end order-1 lg:order-2 mt-10">
+                <div className="flex justify-center mt-20 md:justify-end order-1 lg:order-2 lag:mt-10">
                     <div
                         className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-white rounded-xl p-3 shadow-md transition-all duration-700 transform ${showImage
                             ? "opacity-100 translate-y-0"

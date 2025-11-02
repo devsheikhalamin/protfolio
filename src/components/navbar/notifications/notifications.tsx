@@ -51,11 +51,11 @@ function Notifications() {
                 </p>
 
                 {/* Static Clients Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-10 justify-items-center px-10">
+                <div className="grid grid-cols sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-10 justify-items-center px-10">
                     {clients.map((client) => (
                         <div
                             key={client.id}
-                            className="rounded-xl shadow-md p-6 flex items-center justify-center bg-white/70 backdrop-blur-md"
+                            className="rounded-xl shadow-md p-6 flex items-center justify-center bg-white/70 backdrop-blur-md mt-2.5"
                         >
                             <div className={`p-6 rounded-full ${client.bg}`}>
                                 <img

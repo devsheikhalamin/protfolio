@@ -58,7 +58,9 @@ function PortfolioSection() {
     return (
         <div id="Project" className="bg-emerald-50 dark:bg-background py-10">
             <div className="text-center">
-                <h3 className=" mb-6 text-2xl sm:text-3xl md:text-5xl font-extrabold text-emerald-800 dark:text-white">My Project</h3>
+                <h3 className="mb-6 text-2xl sm:text-3xl md:text-5xl font-extrabold text-emerald-800 dark:text-white">
+                    My Project
+                </h3>
                 <p className="mb-6 text-gray-600 text-sm md:text-base lg:text-2xl leading-relaxed dark:text-white">
                     Check out some of our latest projects below.
                 </p>
@@ -75,10 +77,8 @@ function PortfolioSection() {
                 {boxes.map((box) => (
                     <motion.div
                         key={box.id}
-                        className={`${box.bg} rounded-2xl shadow-md min-h-[500px] flex flex-col justify-between p-3 cursor-pointer`}
+                        className={`${box.bg} rounded-2xl shadow-md min-h-[500px] flex flex-col justify-between p-3 cursor-default`}
                         variants={item}
-                        whileHover={{ scale: 1.05, boxShadow: "0px 15px 25px rgba(0,0,0,0.2)" }}
-                        transition={{ type: "spring", stiffness: 300 }}
                     >
                         <img
                             className="w-full h-[200px] object-cover rounded-md mt-1.5"
@@ -89,9 +89,10 @@ function PortfolioSection() {
                         <p className="text-[16px] text-gray-500 text-center mt-2 ">{box.category}</p>
                         <p className="text-[19px] font-bold text-center mt-1 dark:text-gray-600">{box.title}</p>
                         <p className="text-[15px] text-gray-600 text-center mt-2 px-2">{box.desc}</p>
-                        <div className="border border-gray-600 rounded-md py-2 px-4 w-40 mx-auto mt-5 mb-4 cursor-pointer transition-colors duration-300 hover:bg-emerald-800 hover:text-white">
+
+                        <div className="border border-gray-600 rounded-md py-2 px-4 w-40 mx-auto mt-5 mb-4 text-gray-600 text-center hover:bg-emerald-600">
                             <a href={box.link} target="_blank" rel="noopener noreferrer">
-                                <button className="w-full text-center text-gray-600 hover:text-white">Case Study</button>
+                                <button className="w-full text-center hover:text-white">View Project</button>
                             </a>
                         </div>
                     </motion.div>
@@ -100,7 +101,7 @@ function PortfolioSection() {
 
             {/* More Projects Button */}
             <div className="text-center mt-12 pb-6">
-                <button className="border-0 text-white px-14 py-3 bg-emerald-800 rounded-md hover:bg-emerald-800 hover:scale-105 transition-all duration-300 text-lg">
+                <button className="border-0 text-white px-14 py-3 bg-emerald-800 rounded-md text-lg">
                     More Projects
                 </button>
             </div>

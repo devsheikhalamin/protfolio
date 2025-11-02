@@ -55,7 +55,7 @@ const Footer04Page = () => {
                   <li key={title}>
                     <Link
                       to={href}
-                      className="hover:text-foreground text-emerald-600 text-[18px]"
+                      className="hover:text-foreground text-emerald-600 text-[14px]"
                     >
                       {title}
                     </Link>
@@ -66,7 +66,7 @@ const Footer04Page = () => {
 
             {/* Subscribe Newsletter */}
             <div className="max-w-xs w-full">
-              <h6 className="font-medium text-[17px] text-emerald-600">Stay up to date</h6>
+              <h6 className="font-medium text-[16px] text-emerald-600">Stay up to date</h6>
               <form className="mt-6 flex items-center gap-2">
                 <Input type="email" placeholder="Enter your email" />
                 <Button className="bg-emerald-700 text-white hover:bg-gray-50 hover:text-black">Subscribe</Button>
@@ -76,7 +76,7 @@ const Footer04Page = () => {
           <Separator />
           <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
             {/* Copyright */}
-            <span className="text-emerald-700">
+            <span className="text-emerald-700 text-sm">
               &copy; {new Date().getFullYear()}{" "}
               <Link to="/" target="_blank">
                 Sheikhalamin

@@ -68,10 +68,8 @@ const Footer04Page = () => {
             <div className="max-w-xs w-full">
               <h6 className="font-medium text-[16px] text-purple-500">Stay up to date</h6>
               <form className="mt-6 flex items-center gap-2">
-                <Input type="email" placeholder="Enter your email" />
-                <button className="px-4 py-2 rounded-md hover:text-white bg-gradient-to-r from-purple-500 via-purple-400
- hover:from-purple-900 hover:via-fuchsia-800 to-fuchsia-400
- transition-all duration-500 shadow-lg text-white">
+                <Input className="bg-gray-100" type="email" placeholder="Enter your email" />
+                <button className="px-4 py-2 rounded-md hover:text-white bg-gradient-to-r from-purple-500 via-purple-400 hover:from-purple-900 hover:via-fuchsia-800 to-fuchsia-400 transition-all duration-500 shadow-lg text-white">
                   Subscribe
                 </button>
               </form>
@@ -90,16 +88,16 @@ const Footer04Page = () => {
 
             <div className="flex items-center gap-5 text-muted-foreground">
               <Link to="#" target="_blank">
-                <TwitterIcon className="h-5 w-5" />
+                <TwitterIcon className="h-5 w-5 text-fuchsia-500" />
               </Link>
               <Link to="#" target="_blank">
-                <DribbbleIcon className="h-5 w-5" />
+                <DribbbleIcon className="h-5 w-5 text-fuchsia-500 " />
               </Link>
               <Link to="#" target="_blank">
-                <TwitchIcon className="h-5 w-5" />
+                <TwitchIcon className="h-5 w-5 text-fuchsia-500 " />
               </Link>
               <a href="#https://github.com/devsheikhalamin">
-                <GithubIcon className="h-5 w-5" />
+                <GithubIcon className="h-5 w-5 text-fuchsia-500" />
               </a>
             </div>
           </div>

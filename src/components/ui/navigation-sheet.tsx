@@ -8,7 +8,7 @@ export const NavigationSheet = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" className="bg-gradient-to-r from-purple-400 via-fuchsia-300 to-purple-300 cursor-pointer hover:text-white ">
           <Menu />
         </Button>
       </SheetTrigger>

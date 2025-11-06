@@ -9,7 +9,6 @@ function MainLayout() {
                 <HeaderPage />
                 <div className="flex-1">
 
-
                 </div>
 
             </div>

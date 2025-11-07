@@ -75,7 +75,7 @@ function AboutSection() {
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-10">
                             I am{" "}
                             <span className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-500 via-fuchsia-700 to-purple-500 bg-clip-text text-transparent mt-3">
-                                Web Developer
+                                Frontend Developer
                             </span>
                         </h2>
 

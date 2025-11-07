@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-// TypingText Component
+// Typing Text Component
 function TypingText({ texts = ["Hello World"], speed = 150, pause = 1000 }) {
     const [displayedText, setDisplayedText] = useState("");
     const [textIndex, setTextIndex] = useState(0);
@@ -54,22 +54,22 @@ function HeroSection() {
     const imageFade = useScrollFade();
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 lg:mt-10 mt-20 bg-white dark:bg-background">
-            <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 lg:px-12">
+        <section id="/" className="py-16 sm:py-20 md:py-24 lg:mt-10 mt-20 bg-white dark:bg-background overflow-x-hidden w-full">
+            <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
 
                 {/* Image */}
                 <div
                     ref={imageFade.ref}
                     className={`transition-all duration-1000 transform
-            order-1 lg:order-2 flex justify-center md:justify-end
-            ${imageFade.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
-          `}
+                        order-1 lg:order-2 flex justify-center md:justify-end
+                        ${imageFade.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
+                    `}
                 >
-                    <div className="w-72 sm:w-80 md:w-96 lg:w-[520px] bg-purple-100 rounded-xl p-1 shadow-md">
+                    <div className="w-full max-w-[520px] bg-purple-100 rounded-xl p-1 shadow-md overflow-hidden">
                         <img
                             src="/images/frond.jpg"
                             alt="Profile"
-                            className="w-full h-auto rounded-md object-cover"
+                            className="w-full h-auto rounded-md object-cover max-w-full"
                         />
                     </div>
                 </div>
@@ -78,9 +78,9 @@ function HeroSection() {
                 <div
                     ref={textFade.ref}
                     className={`transition-all duration-1000 transform
-            order-2 lg:order-1 flex flex-col text-center md:text-left
-            ${textFade.isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
-          `}
+                        order-2 lg:order-1 flex flex-col text-center md:text-left
+                        ${textFade.isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+                    `}
                 >
                     <h1 className="text-xl sm:text-2xl font-semibold mb-1.5 text-gray-700 dark:text-gray-100">
                         Hello, I'm
@@ -107,16 +107,58 @@ function HeroSection() {
                         I'm a{" "}
                         <span className="font-semibold text-gray-800 dark:text-amber-50">
                             Frontend Developer
-                        </span>
-                        I build responsive and scalable web apps using clean code and modern technologies like React, Tailwind CSS, and JavaScript, creating user-friendly designs for a great experience
+                        </span>{" "}
+                        I build responsive and scalable web apps using clean code and modern technologies like React, Tailwind CSS, and JavaScript, creating user-friendly designs for a great experience.
                     </p>
 
                     {/* Download CV Button */}
-                    <div className="mt-6 flex flex-col sm:flex-row items-center sm:items-start justify-center md:justify-start">
-                        <button className="flex items-center gap-2 px-14 lg:px-6 py-3 text-sm sm:text-lg font-medium border border-purple-500 cursor-pointer rounded-md hover:bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 transition-all duration-500 shadow-lg dark:text-white hover:text-white hover:scale-105 active:scale-95" onClick={() => { const link = document.createElement("a"); link.href = "/images/Alamin_Sheikh_Web_Developer_CV.pdf"; link.download = "Alamin_Sheikh_Web_Developer_CV.pdf"; document.body.appendChild(link); link.click(); document.body.removeChild(link); }} > {/* Animated Download Icon */} <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" className="flex-shrink-0" > <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" > <path fill="currentColor" fillOpacity="0" strokeDasharray="20" strokeDashoffset="20" d="M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5" > <animate attributeName="d" begin="0.5s" dur="1.5s" repeatCount="indefinite" values="M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5; M12 4h2v3h2.5l-4.5 4.5M12 4h-2v3h-2.5l4.5 4.5; M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5" /> <animate fill="freeze" attributeName="fill-opacity" begin="0.7s" dur="0.5s" values="0;1" /> <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0" /> </path> <path strokeDasharray="14" strokeDashoffset="14" d="M6 19h12" > <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="14;0" /> </path> </g> </svg> <span>Download CV</span> </button>
+                    <div className="mt-6 flex flex-col sm:flex-row items-center sm:items-start justify-center md:justify-start overflow-hidden">
+                        <button
+                            className="flex items-center gap-2 px-14 lg:px-6 py-3 text-sm sm:text-lg font-medium border border-purple-500 cursor-pointer rounded-md hover:bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 transition-all duration-500 shadow-lg dark:text-white hover:text-white hover:scale-105 active:scale-95"
+                            onClick={() => {
+                                const link = document.createElement("a");
+                                link.href = "/images/White simple Sales Representative Cv Resume.pdf";
+                                link.download = "White simple Sales Representative Cv Resume.pdf";
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
+                        >
+                            {/* Animated Download Icon */}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                className="flex-shrink-0"
+                            >
+                                <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+                                    <path
+                                        fill="currentColor"
+                                        fillOpacity="0"
+                                        strokeDasharray="20"
+                                        strokeDashoffset="20"
+                                        d="M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5"
+                                    >
+                                        <animate
+                                            attributeName="d"
+                                            begin="0.5s"
+                                            dur="1.5s"
+                                            repeatCount="indefinite"
+                                            values="M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5; M12 4h2v3h2.5l-4.5 4.5M12 4h-2v3h-2.5l4.5 4.5; M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5"
+                                        />
+                                        <animate fill="freeze" attributeName="fill-opacity" begin="0.7s" dur="0.5s" values="0;1" />
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0" />
+                                    </path>
+                                    <path strokeDasharray="14" strokeDashoffset="14" d="M6 19h12">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="14;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                            <span>Download CV</span>
+                        </button>
                     </div>
                 </div>
-
             </div>
         </section>
     );

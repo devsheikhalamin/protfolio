@@ -16,7 +16,8 @@ function useScrollFade() {
     }, []);
 
     return { ref, isVisible };
-};
+}
+
 const socialLinks = [
     { icon: FaYoutube, url: "https://www.youtube.com/" },
     { icon: FaFacebook, url: "https://www.facebook.com/alaminshekh4321" },
@@ -29,30 +30,35 @@ function AboutSection() {
     const imageFade = useScrollFade();
 
     return (
-        <section id="About" className="dark:bg-background py-16 sm:py-20 md:py-24">
-            <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
+        <section
+            id="About"
+            className="dark:bg-background py-16 sm:py-20 md:py-24 overflow-x-hidden w-full"
+        >
+            <div className="max-w-screen-xl mx-auto px-3 sm:px-6 lg:px-8">
 
                 {/* Heading */}
                 <div className="text-center mb-10">
-                    <h2 className="lg:text-5xl text-4xl font-bold lg:font-medium  bg-gradient-to-r from-purple-500 via-fuchsia-700 to-orange-300 bg-clip-text text-transparent mt-4">
+                    <h2 className="lg:text-5xl text-4xl font-bold lg:font-medium bg-gradient-to-r from-purple-500 via-fuchsia-700 to-orange-300 bg-clip-text text-transparent mt-4">
                         About Me
                     </h2>
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col md:flex-row items-center gap-20 overflow-hidden">
+                <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-20 overflow-hidden w-full">
 
                     {/* Image (fade-in from left) */}
                     <div
                         ref={imageFade.ref}
-                        className={`flex justify-center md:justify-start transition-all duration-1000 transform ${imageFade.isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                        className={`flex justify-center md:justify-start transition-all duration-1000 transform ${imageFade.isVisible
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-10"
                             }`}
                     >
-                        <div className="w-72 sm:w-80 md:w-96 lg:w-[500px] bg-purple-100 rounded-xl p-1 shadow-md">
+                        <div className="w-full max-w-[480px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] bg-purple-100 rounded-xl p-1 shadow-md overflow-hidden">
                             <img
                                 src="/images/alamin-4.jpg"
                                 alt="Profile"
-                                className="w-full h-auto rounded-md object-cover"
+                                className="w-full h-auto rounded-md object-cover max-w-full"
                             />
                         </div>
                     </div>
@@ -60,7 +66,9 @@ function AboutSection() {
                     {/* Text (fade-in from right) */}
                     <div
                         ref={textFade.ref}
-                        className={`flex-1 text-center md:text-left transition-all duration-1000 transform ${textFade.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+                        className={`flex-1 text-center md:text-left transition-all duration-1000 transform ${textFade.isVisible
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 translate-x-10"
                             }`}
                         style={{ transitionDelay: "0.3s" }}
                     >
@@ -71,8 +79,8 @@ function AboutSection() {
                             </span>
                         </h2>
 
-                        <p className="mb-10 text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed dark:text-gray-200">
-                            <strong>Hi! My name is Alamin Sheikh</strong> a passionate Frontend Developer who loves building beautiful, interactive, and user-friendly web applications using modern tools like React, Tailwind CSS, and JavaScript.
+                        <p className="mb-10 text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed dark:text-gray-200 px-2 sm:px-0">
+                            <strong>Hi! My name is Alamin Sheikh</strong> — a passionate Frontend Developer who loves building beautiful, interactive, and user-friendly web applications using modern tools like React, Tailwind CSS, and JavaScript.
                             <br />
                             <br />
                             I enjoy crafting smooth UI experiences and writing clean, maintainable code. I’m also learning backend technologies to become a complete full-stack developer.
@@ -96,7 +104,6 @@ function AboutSection() {
                             })}
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

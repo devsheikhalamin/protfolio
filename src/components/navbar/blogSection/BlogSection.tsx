@@ -11,7 +11,7 @@ interface Blog {
     tags: string[];
 }
 
-// Hook for scroll fade
+
 function useScrollFade() {
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
@@ -63,18 +63,22 @@ function BlogSection() {
     ];
 
     return (
-        <div id="Project" className="px-5 sm:px-6 md:px-10 lg:px-20 py-12 dark:bg-background">
-            <div className="text-center mb-10">
-                <h4 className="text-5xl font-medium bg-gradient-to-r from-purple-500 via-fuchsia-700 to-orange-300 bg-clip-text text-transparent mb-4">
-                    My Project
+        <section
+            id="Project"
+            className="w-full overflow-x-hidden bg-white dark:bg-background py-16 sm:py-20 md:py-24"
+        >
+            {/* Section Header */}
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
+                <h4 className="text-4xl sm:text-5xl font-semibold bg-gradient-to-r from-purple-500 via-fuchsia-700 to-orange-300 bg-clip-text text-transparent mb-4">
+                    My Projects
                 </h4>
-                <p className="mb-4 text-gray-600 text-sm md:text-base lg:text-2xl leading-relaxed dark:text-white">
+                <p className="text-gray-600 dark:text-gray-200 text-sm sm:text-base lg:text-xl leading-relaxed">
                     Here are some of my projects showcasing my skills and work.
                 </p>
             </div>
 
-            {/* Blog Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:px-32 gap-8 lg:gap-0 justify-items-center">
+            {/* Responsive Grid */}
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center px-4 sm:px-6 lg:px-10">
                 {blogs.map((blog, index) => {
                     const fade = useScrollFade();
 
@@ -82,20 +86,23 @@ function BlogSection() {
                         <div
                             key={blog.id}
                             ref={fade.ref}
-                            className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-purple-300 overflow-hidden w-full max-w-xs transform transition-all duration-700 ease-out
-                                ${fade.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                            className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-purple-500 overflow-hidden w-full max-w-xs sm:max-w-sm transform transition-all duration-700 ease-out
+                            ${fade.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                             style={{ transitionDelay: `${index * 150}ms` }}
                         >
+                            {/* Image */}
                             <img
-                                className="w-full h-48 object-cover rounded-t-2xl border-b border-fuchsia-500"
+                                className="w-full h-48 sm:h-56 md:h-60 object-cover rounded-t-2xl border-b border-fuchsia-500"
                                 src={blog.img}
                                 alt="blog"
                             />
+
+                            {/* Card Content */}
                             <div className="p-5 text-center">
-                                <p className="text-xs text-gray-500 dark:text-gray-400">
+                                <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                                     {blog.date} / {blog.comments}
                                 </p>
-                                <p className="text-sm text-gray-700 font-medium mt-2 dark:text-gray-200">
+                                <p className="text-sm sm:text-base text-gray-700 font-medium mt-2 dark:text-gray-200">
                                     {blog.desc}
                                 </p>
 
@@ -104,7 +111,7 @@ function BlogSection() {
                                     {blog.tags.map((tag, idx) => (
                                         <span
                                             key={idx}
-                                            className="px-2 py-1 bg-fuchsia-200 text-xs rounded-2xl dark:bg-purple-400 dark:text-white text-gray-700"
+                                            className="px-2 py-1 bg-fuchsia-200 text-xs sm:text-sm rounded-2xl dark:bg-purple-400 dark:text-white text-gray-700"
                                         >
                                             {tag}
                                         </span>
@@ -112,14 +119,14 @@ function BlogSection() {
                                 </div>
 
                                 {/* Buttons */}
-                                <div className="flex justify-center gap-3 mt-4 flex-wrap">
+                                <div className="flex justify-center gap-3 mt-5 flex-wrap">
                                     <a href={blog.codeLink} target="_blank" rel="noopener noreferrer">
-                                        <button className="px-3.5 py-2 rounded-md border border-purple-400 text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 transition-all duration-500 shadow-lg hover:text-white">
+                                        <button className="px-4 py-2 rounded-md border border-purple-400 text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 transition-all duration-500 shadow-lg hover:text-white">
                                             Code
                                         </button>
                                     </a>
                                     <a href={blog.liveLink} target="_blank" rel="noopener noreferrer">
-                                        <button className="px-4 py-2 rounded-md text-white bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 hover:from-purple-900 hover:via-fuchsia-800 transition-all duration-500 shadow-lg">
+                                        <button className="px-5 py-2 rounded-md text-white bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 hover:from-purple-900 hover:via-fuchsia-800 transition-all duration-500 shadow-lg">
                                             Live
                                         </button>
                                     </a>
@@ -129,7 +136,7 @@ function BlogSection() {
                     );
                 })}
             </div>
-        </div>
+        </section>
     );
 }
 

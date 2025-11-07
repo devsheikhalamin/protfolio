@@ -31,7 +31,7 @@ function SkillsSection() {
     ];
 
     return (
-        <section id="Work" className="dark:bg-background py-16 px-5">
+        <section id="skills" className="dark:bg-background py-16 px-5">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 text-center mt-5">
                 <h2 className="text-5xl font-medium bg-gradient-to-r from-purple-500 via-fuchsia-700 to-orange-300 bg-clip-text text-transparent mt-4">
                     Skills & Technologies

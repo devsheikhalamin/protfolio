@@ -46,7 +46,7 @@ function WorkSection() {
                                 ${fade.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                                 style={{ transitionDelay: `${index * 100}ms` }}
                             >
-                                <div className="flex items-center justify-center w-12 h-12 mx-auto bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 text-white text-2xl rounded-lg shadow-lg">
+                                <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gradient-to-r from-purple-500 via-purple-400 to-fuchsia-400 text-white text-2xl rounded-lg shadow-lg">
                                     {step.icon}
                                 </div>
                                 <h3 className="mt-4 text-lg font-bold text-gray-800">

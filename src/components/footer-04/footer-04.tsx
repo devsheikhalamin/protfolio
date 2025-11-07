@@ -17,7 +17,6 @@ const Footer04Page = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Simple email validation regex
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailPattern.test(email)) {
@@ -26,10 +25,9 @@ const Footer04Page = () => {
       setEmail("");
     } else {
       setStatus("error");
-      setMessage(" Invalid email! Please try again.");
+      setMessage("Invalid email! Please try again.");
     }
 
-    // Clear message after few seconds
     setTimeout(() => setMessage(""), 3000);
   };
 
@@ -38,31 +36,37 @@ const Footer04Page = () => {
       <div className="grow bg-muted" />
       <footer className="border-t">
         <div className="max-w-(--breakpoint-xl) mx-auto">
-          <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10 px-6 xl:px-0">
+
+          {/* Top Section */}
+          <div className="py-12 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-x-8 gap-y-10 px-6 xl:px-0 text-center sm:text-left">
 
             {/* Left Section */}
-            <div>
+            <div className="flex flex-col items-center sm:items-start">
               <h1 className="text-[28px] font-extrabold">
-                <img className="h-15 rounded-full" src="/images/logo01.jpg" alt="logo" />
+                <img
+                  className="h-15 rounded-full"
+                  src="/images/logo01.jpg"
+                  alt="logo"
+                />
               </h1>
 
-              <div className="mt-6 text-purple-600 text-[14px] space-y-2">
+              <div className="mt-4 text-purple-600 text-[15px] font-medium space-y-2">
                 <p>A student and a part-time teacher at Ahmad's School</p>
               </div>
             </div>
 
             {/* Subscribe Newsletter */}
-            <div className="max-w-xs w-full">
-              <h6 className="font-medium text-[16px] text-purple-500">
+            <div className="max-w-xs w-full flex flex-col items-center sm:items-start">
+              <h6 className="font-bold text-[18px] text-purple-500">
                 Stay up to date
               </h6>
 
               <form
                 onSubmit={handleSubmit}
-                className="mt-6 flex flex-col sm:flex-row items-center gap-2"
+                className="mt-6 flex flex-col sm:flex-row items-center gap-2 w-full"
               >
                 <Input
-                  className="bg-gray-100 w-full"
+                  className="bg-gray-100 w-full text-center sm:text-left"
                   type="email"
                   placeholder="Enter your email"
                   value={email}
@@ -79,9 +83,7 @@ const Footer04Page = () => {
               {/* Success / Error Message */}
               {message && (
                 <p
-                  className={`mt-3 text-sm ${status === "success"
-                    ? "text-green-600"
-                    : "text-red-600"
+                  className={`mt-3 text-sm ${status === "success" ? "text-green-600" : "text-red-600"
                     }`}
                 >
                   {message}
@@ -93,8 +95,10 @@ const Footer04Page = () => {
           <Separator />
 
           {/* Bottom Section */}
-          <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
-            <span className="text-purple-500 text-sm text-center sm:text-left">
+          <div className="py-8 flex flex-col sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0 text-center sm:text-left">
+
+            {/* Copyright */}
+            <span className="text-purple-500 text-sm">
               &copy; {new Date().getFullYear()}{" "}
               <Link to="/" target="_blank" className="hover:underline">
                 Sheikhalamin
@@ -102,7 +106,8 @@ const Footer04Page = () => {
               . All rights reserved.
             </span>
 
-            <div className="flex items-center gap-5">
+            {/* Social Icons */}
+            <div className="flex items-center justify-center sm:justify-end gap-5">
               <Link to="#" target="_blank">
                 <TwitterIcon className="h-5 w-5 text-fuchsia-500 hover:text-purple-700 transition-colors" />
               </Link>

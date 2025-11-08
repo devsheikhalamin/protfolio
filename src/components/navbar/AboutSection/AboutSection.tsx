@@ -56,7 +56,7 @@ function AboutSection() {
                     >
                         <div className="w-full max-w-[480px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] bg-purple-100 rounded-xl p-1 shadow-md overflow-hidden">
                             <img
-                                src="/images/alamin-4.jpg"
+                                src="/images/pro02.jpg"
                                 alt="Profile"
                                 className="w-full h-auto rounded-md object-cover max-w-full"
                             />

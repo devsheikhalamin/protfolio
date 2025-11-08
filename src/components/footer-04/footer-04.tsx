@@ -13,7 +13,7 @@ const Footer04Page = () => {
       <Separator />
 
       {/* Bottom Section */}
-      <div className="py-8 flex flex-col items-center justify-center gap-3 px-6 text-center">
+      <div className="py-4 px-4 flex flex-col items-center justify-center gap-3 text-center">
         {/* Copyright */}
         <span className="text-purple-500 text-sm">
           &copy; {new Date().getFullYear()}{" "}
